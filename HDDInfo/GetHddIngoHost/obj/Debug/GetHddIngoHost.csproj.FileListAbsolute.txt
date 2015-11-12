@@ -1,0 +1,8 @@
+G:\Documents\VisualStudio2012_Projects\HDDInfo\GetHddIngoHost\bin\Debug\GetHddIngoHost.exe.config
+G:\Documents\VisualStudio2012_Projects\HDDInfo\GetHddIngoHost\bin\Debug\GetHddIngoHost.exe
+G:\Documents\VisualStudio2012_Projects\HDDInfo\GetHddIngoHost\bin\Debug\GetHddIngoHost.pdb
+G:\Documents\VisualStudio2012_Projects\HDDInfo\GetHddIngoHost\bin\Debug\HDDInfo.dll
+G:\Documents\VisualStudio2012_Projects\HDDInfo\GetHddIngoHost\bin\Debug\HDDInfo.pdb
+G:\Documents\VisualStudio2012_Projects\HDDInfo\GetHddIngoHost\obj\Debug\GetHddIngoHost.csprojResolveAssemblyReference.cache
+G:\Documents\VisualStudio2012_Projects\HDDInfo\GetHddIngoHost\obj\Debug\GetHddIngoHost.exe
+G:\Documents\VisualStudio2012_Projects\HDDInfo\GetHddIngoHost\obj\Debug\GetHddIngoHost.pdb

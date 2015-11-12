@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDDInfo", "HDDInfo\HDDInfo.csproj", "{E315C3D9-0164-48E8-9F3F-21D43CE69EF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetHddIngoHost", "GetHddIngoHost\GetHddIngoHost.csproj", "{D6533138-CD63-49CE-B5A4-FCE59D8BB395}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E315C3D9-0164-48E8-9F3F-21D43CE69EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E315C3D9-0164-48E8-9F3F-21D43CE69EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E315C3D9-0164-48E8-9F3F-21D43CE69EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E315C3D9-0164-48E8-9F3F-21D43CE69EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6533138-CD63-49CE-B5A4-FCE59D8BB395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6533138-CD63-49CE-B5A4-FCE59D8BB395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6533138-CD63-49CE-B5A4-FCE59D8BB395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6533138-CD63-49CE-B5A4-FCE59D8BB395}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

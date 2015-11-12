@@ -1,0 +1,6 @@
+G:\Documents\VisualStudio2012_Projects\HDDInfo\HDDInfo\bin\Debug\HDDInfo.dll.config
+G:\Documents\VisualStudio2012_Projects\HDDInfo\HDDInfo\bin\Debug\HDDInfo.dll
+G:\Documents\VisualStudio2012_Projects\HDDInfo\HDDInfo\bin\Debug\HDDInfo.pdb
+G:\Documents\VisualStudio2012_Projects\HDDInfo\HDDInfo\obj\Debug\HDDInfo.dll
+G:\Documents\VisualStudio2012_Projects\HDDInfo\HDDInfo\obj\Debug\HDDInfo.pdb
+G:\Documents\VisualStudio2012_Projects\HDDInfo\HDDInfo\obj\Debug\HDDInfo.csprojResolveAssemblyReference.cache
