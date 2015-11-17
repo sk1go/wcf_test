@@ -13,17 +13,17 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Host port" Margin="5,5,5,5" Width="67"/>
-                <TextBox Height="22" Margin="5,5,5,5" Width="45" TextAlignment="Center" Text="12777" />               
+                <TextBox Height="22" Margin="5,5,5,5" Width="45" TextAlignment="Center" Text="12777" TabIndex="4"/>               
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="User name" Margin="5,5,5,5" Width="67"/>
-                <TextBox Height="22" Margin="5,5,5,5" Width="160" TextAlignment="Center" />
+                <TextBox Height="22" Margin="5,5,5,5" Width="160" TextAlignment="Center" TabIndex="5"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Password" Margin="5,5,5,5" Width="67"/>
-                <TextBox Height="22" Margin="5,5,5,5" Width="160" TextAlignment="Center" />
+                <TextBox Height="22" Margin="5,5,5,5" Width="160" TextAlignment="Center" TabIndex="6"/>
             </StackPanel>
-            <Button  Margin="5,5,5,5" Content="Log In"/>
+            <Button  Margin="5,5,5,5" Content="Log In" TabIndex="7"/>
         </StackPanel>
 
     </Grid>
