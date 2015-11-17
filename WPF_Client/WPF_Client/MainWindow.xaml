@@ -6,14 +6,14 @@
         <StackPanel HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" >
             <StackPanel Orientation="Horizontal">
                 <Label Content="Host IP" Margin="5,5,5,5" Width="67"/>
-                <TextBox Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="127" TabIndex="0"/>
-                <TextBox Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="0" TabIndex="1"/>
-                <TextBox Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="0" TabIndex="2"/>
-                <TextBox Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="1" TabIndex="3"/>
+                <TextBox Name="TB_ip_1" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="127" TabIndex="0"/>
+                <TextBox Name="TB_ip_2" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="0" TabIndex="1"/>
+                <TextBox Name="TB_ip_3" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="0" TabIndex="2"/>
+                <TextBox Name="TB_ip_4" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="1" TabIndex="3"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Host port" Margin="5,5,5,5" Width="67"/>
-                <TextBox Height="22" Margin="5,5,5,5" Width="45" TextAlignment="Center" Text="12777" TabIndex="4"/>               
+                <TextBox Name="TB_port" Height="22" Margin="5,5,5,5" Width="45" TextAlignment="Center" Text="12777" TabIndex="4"/>               
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="User name" Margin="5,5,5,5" Width="67"/>
@@ -23,8 +23,10 @@
                 <Label Content="Password" Margin="5,5,5,5" Width="67"/>
                 <TextBox Height="22" Margin="5,5,5,5" Width="160" TextAlignment="Center" TabIndex="6"/>
             </StackPanel>
-            <Button  Margin="5,5,5,5" Content="Log In" TabIndex="7"/>
+            <Button  Margin="5,5,5,5" Content="Log In" TabIndex="7" Click="Button_Click"/>
+            <ListBox Margin="5,5,5,5"  Name="LB_result" ScrollViewer.IsDeferredScrollingEnabled="True" MaxHeight="600" MaxWidth="800"/>
         </StackPanel>
+        
 
     </Grid>
 </Window>
