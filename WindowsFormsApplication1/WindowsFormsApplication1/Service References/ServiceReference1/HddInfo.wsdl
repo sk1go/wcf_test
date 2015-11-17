@@ -34,6 +34,7 @@
       <xsd:import schemaLocation="http://localhost:8000/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8000/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:8000/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HDDInfo" />
+      <xsd:import schemaLocation="http://localhost:8000/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IHddInfo_GetHddInfo_InputMessage">
@@ -42,62 +43,12 @@
   <wsdl:message name="IHddInfo_GetHddInfo_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetHddInfoResponse" />
   </wsdl:message>
-  <wsdl:message name="IHddInfo_Test_InputMessage">
-    <wsdl:part name="parameters" element="tns:Test" />
-  </wsdl:message>
-  <wsdl:message name="IHddInfo_Test_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TestResponse" />
-  </wsdl:message>
-  <wsdl:message name="IHddInfo_TestMyObject_InputMessage">
-    <wsdl:part name="parameters" element="tns:TestMyObject" />
-  </wsdl:message>
-  <wsdl:message name="IHddInfo_TestMyObject_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TestMyObjectResponse" />
-  </wsdl:message>
   <wsdl:portType name="IHddInfo">
     <wsdl:operation name="GetHddInfo">
       <wsdl:input wsaw:Action="http://tempuri.org/IHddInfo/GetHddInfo" message="tns:IHddInfo_GetHddInfo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IHddInfo/GetHddInfoResponse" message="tns:IHddInfo_GetHddInfo_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Test">
-      <wsdl:input wsaw:Action="http://tempuri.org/IHddInfo/Test" message="tns:IHddInfo_Test_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IHddInfo/TestResponse" message="tns:IHddInfo_Test_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="TestMyObject">
-      <wsdl:input wsaw:Action="http://tempuri.org/IHddInfo/TestMyObject" message="tns:IHddInfo_TestMyObject_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IHddInfo/TestMyObjectResponse" message="tns:IHddInfo_TestMyObject_OutputMessage" />
-    </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="BasicHttpBinding_IHddInfo" type="tns:IHddInfo">
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetHddInfo">
-      <soap:operation soapAction="http://tempuri.org/IHddInfo/GetHddInfo" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Test">
-      <soap:operation soapAction="http://tempuri.org/IHddInfo/Test" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TestMyObject">
-      <soap:operation soapAction="http://tempuri.org/IHddInfo/TestMyObject" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-  </wsdl:binding>
   <wsdl:binding name="NetTcpBinding_IHddInfo" type="tns:IHddInfo">
     <wsp:PolicyReference URI="#NetTcpBinding_IHddInfo_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
@@ -110,33 +61,12 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Test">
-      <soap12:operation soapAction="http://tempuri.org/IHddInfo/Test" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TestMyObject">
-      <soap12:operation soapAction="http://tempuri.org/IHddInfo/TestMyObject" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="HddInfo">
-    <wsdl:port name="BasicHttpBinding_IHddInfo" binding="tns:BasicHttpBinding_IHddInfo">
-      <soap:address location="http://localhost:8000/HddInfo" />
-    </wsdl:port>
     <wsdl:port name="NetTcpBinding_IHddInfo" binding="tns:NetTcpBinding_IHddInfo">
-      <soap12:address location="net.tcp://localhost:45617/HddInfo" />
+      <soap12:address location="net.tcp://localhost:12345/HddInfo" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://localhost:45617/HddInfo</wsa10:Address>
+        <wsa10:Address>net.tcp://localhost:12345/HddInfo</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>Alexander-ПК\Alexander</Upn>
         </Identity>

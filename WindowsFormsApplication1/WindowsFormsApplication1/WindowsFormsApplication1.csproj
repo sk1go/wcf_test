@@ -90,8 +90,8 @@
     <None Include="Service References\ServiceReference1\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.MyObject.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Service References\ServiceReference1\item3.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.PhisicalDrive.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
