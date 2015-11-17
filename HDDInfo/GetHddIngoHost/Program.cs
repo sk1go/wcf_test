@@ -17,7 +17,6 @@ namespace GetHddIngoHost
                 host.Open();
                 Console.WriteLine("Host is running...");
                 Console.ReadLine();
-                host.Close();
             }
 
            
