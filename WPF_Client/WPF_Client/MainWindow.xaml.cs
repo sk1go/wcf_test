@@ -24,26 +24,30 @@ namespace WPF_Client
         public MainWindow()
         {
             InitializeComponent();
+            TB_ip_1.Focus();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //var IP = "169.254.72.217";
             //var Port = "12345";
-            TB_ip_1.Text = "169";
-            TB_ip_2.Text = "254";
-            TB_ip_3.Text = "72";
-            TB_ip_4.Text = "217";
-            TB_port.Text = "12345";
+            //var IP = "95.84.228.121";
+            //var Port = "12345";
 
             var IP = string.Format("{0}.{1}.{2}.{3}", TB_ip_1.Text, TB_ip_2.Text, TB_ip_3.Text, TB_ip_4.Text);
             var Port = TB_port.Text;
 
-            var client = new ServiceReference1.HddInfoClient("NetTcpBinding_IHddInfo");
+            NetTcpBinding b = new NetTcpBinding();
+            b.Security.Mode = SecurityMode.Transport;
+            b.Security.Transport.ClientCredentialType = TcpClientCredentialType.Windows;
+            EndpointAddress ea = new EndpointAddress(new Uri("net.tcp://" + IP + ":" + Port + "/HddInfo"));
+
+            var client = new ServiceReference1.HddInfoClient(b, ea);
             client.Endpoint.Address = new EndpointAddress(new Uri("net.tcp://" + IP + ":" + Port + "/HddInfo"));
 
-            client.ClientCredentials.UserName.UserName = "test_user";
-            client.ClientCredentials.UserName.Password = "1234";
+            client.ClientCredentials.Windows.ClientCredential.UserName = TB_UserName.Text;
+            client.ClientCredentials.Windows.ClientCredential.Password = TB_Password.Text;
+
             try
             {
                 var res3 = client.GetHddInfo();
@@ -65,6 +69,41 @@ namespace WPF_Client
             {
                 LB_result.Items.Add(ex.Message);
             }
+        }
+
+        private void TB_ip_1_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TB_ip_1.SelectAll();
+        }
+
+        private void TB_ip_2_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TB_ip_2.SelectAll();
+        }
+
+        private void TB_ip_3_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TB_ip_3.SelectAll();
+        }
+
+        private void TB_ip_4_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TB_ip_4.SelectAll();
+        }
+
+        private void TB_port_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TB_port.SelectAll();
+        }
+
+        private void TB_UserName_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TB_UserName.SelectAll();
+        }
+
+        private void TB_Password_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TB_Password.SelectAll();
         }
     }
 }

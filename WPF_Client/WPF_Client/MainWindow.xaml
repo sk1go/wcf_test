@@ -6,22 +6,22 @@
         <StackPanel HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" >
             <StackPanel Orientation="Horizontal">
                 <Label Content="Host IP" Margin="5,5,5,5" Width="67"/>
-                <TextBox Name="TB_ip_1" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="127" TabIndex="0"/>
-                <TextBox Name="TB_ip_2" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="0" TabIndex="1"/>
-                <TextBox Name="TB_ip_3" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="0" TabIndex="2"/>
-                <TextBox Name="TB_ip_4" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="1" TabIndex="3"/>
+                <TextBox Name="TB_ip_1" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="127" TabIndex="0" GotFocus="TB_ip_1_GotFocus"/>
+                <TextBox Name="TB_ip_2" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="0" TabIndex="1" GotFocus="TB_ip_2_GotFocus"/>
+                <TextBox Name="TB_ip_3" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="0" TabIndex="2" GotFocus="TB_ip_3_GotFocus"/>
+                <TextBox Name="TB_ip_4" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="1" TabIndex="3" GotFocus="TB_ip_4_GotFocus"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Host port" Margin="5,5,5,5" Width="67"/>
-                <TextBox Name="TB_port" Height="22" Margin="5,5,5,5" Width="45" TextAlignment="Center" Text="12777" TabIndex="4"/>               
+                <TextBox Name="TB_port" Height="22" Margin="5,5,5,5" Width="45" TextAlignment="Center" Text="12345" TabIndex="4" GotFocus="TB_port_GotFocus"/>               
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="User name" Margin="5,5,5,5" Width="67"/>
-                <TextBox Height="22" Margin="5,5,5,5" Width="160" TextAlignment="Center" TabIndex="5"/>
+                <TextBox Name="TB_UserName" Height="22" Margin="5,5,5,5" Width="160" TextAlignment="Center" TabIndex="5" GotFocus="TB_UserName_GotFocus"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Password" Margin="5,5,5,5" Width="67"/>
-                <TextBox Height="22" Margin="5,5,5,5" Width="160" TextAlignment="Center" TabIndex="6"/>
+                <TextBox Name="TB_Password" Height="22" Margin="5,5,5,5" Width="160" TextAlignment="Center" TabIndex="6" GotFocus="TB_Password_GotFocus"/>
             </StackPanel>
             <Button  Margin="5,5,5,5" Content="Log In" TabIndex="7" Click="Button_Click"/>
             <ListBox Margin="5,5,5,5"  Name="LB_result" ScrollViewer.IsDeferredScrollingEnabled="True" MaxHeight="600" MaxWidth="800"/>
