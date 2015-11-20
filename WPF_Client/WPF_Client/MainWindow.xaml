@@ -1,15 +1,19 @@
 ﻿<Window x:Class="WPF_Client.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:WPF_Client"
         Title="Hdd Info Service's Client" SizeToContent="WidthAndHeight" >
+    <Window.DataContext>
+        <local:ConnectionInfo />
+    </Window.DataContext>
     <Grid>
         <StackPanel HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" >
             <StackPanel Orientation="Horizontal">
                 <Label Content="Host IP" Margin="5,5,5,5" Width="67"/>
-                <TextBox Name="TB_ip_1" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="127" TabIndex="0" GotFocus="TB_ip_1_GotFocus"/>
-                <TextBox Name="TB_ip_2" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="0" TabIndex="1" GotFocus="TB_ip_2_GotFocus"/>
-                <TextBox Name="TB_ip_3" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="0" TabIndex="2" GotFocus="TB_ip_3_GotFocus"/>
-                <TextBox Name="TB_ip_4" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center" Text="1" TabIndex="3" GotFocus="TB_ip_4_GotFocus"/>
+                <TextBox Name="TB_ip_1" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center"  TabIndex="0" GotFocus="TB_ip_1_GotFocus" Text="{Binding Path=IPBlock_1, Mode=TwoWay, ValidatesOnNotifyDataErrors=True}"/>
+                <TextBox Name="TB_ip_2" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center"  TabIndex="1" GotFocus="TB_ip_2_GotFocus" Text="{Binding Path=IPBlock_2, Mode=TwoWay, ValidatesOnNotifyDataErrors=True}"/>
+                <TextBox Name="TB_ip_3" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center"  TabIndex="2" GotFocus="TB_ip_3_GotFocus" Text="{Binding Path=IPBlock_3, Mode=TwoWay, ValidatesOnNotifyDataErrors=True}"/>
+                <TextBox Name="TB_ip_4" Height="22" Margin="5,5,5,5" Width="33" TextAlignment="Center"  TabIndex="3" GotFocus="TB_ip_4_GotFocus" Text="{Binding Path=IPBlock_4, Mode=TwoWay, ValidatesOnNotifyDataErrors=True}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Host port" Margin="5,5,5,5" Width="67"/>

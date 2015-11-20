@@ -21,10 +21,12 @@ namespace WPF_Client
     /// </summary>
     public partial class MainWindow : Window
     {
+        ConnectionInfo _viewModel;
         public MainWindow()
         {
             InitializeComponent();
             TB_ip_1.Focus();
+            _viewModel = (ConnectionInfo)base.DataContext;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
