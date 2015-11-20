@@ -17,7 +17,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Host port" Margin="5,5,5,5" Width="67"/>
-                <TextBox Name="TB_port" Height="22" Margin="5,5,5,5" Width="45" TextAlignment="Center" Text="12345" TabIndex="4" GotFocus="TB_port_GotFocus"/>               
+                <TextBox Name="TB_port" Height="22" Margin="5,5,5,5" Width="45" TextAlignment="Center" TabIndex="4" GotFocus="TB_port_GotFocus" Text="{Binding Path=Port, Mode=TwoWay, ValidatesOnNotifyDataErrors=True}"/>               
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="User name" Margin="5,5,5,5" Width="67"/>

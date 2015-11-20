@@ -40,19 +40,20 @@ namespace WPF_Client
             IPBlock_1 = "127"; 
             IPBlock_2 = "0"; 
             IPBlock_3 = "0"; 
-            IPBlock_4 = "1"; 
+            IPBlock_4 = "1";
+            Port = "12345";
         }
 
-        private string ipBlock_1;
+        private string _ipBlock_1;
         public string IPBlock_1
         {
-            get { return ipBlock_1; }
+            get { return _ipBlock_1; }
             set
             {
-                ipBlock_1 = value;
+                _ipBlock_1 = value;
 
                 bool valid = true;
-                foreach (char c in ipBlock_1)
+                foreach (char c in _ipBlock_1)
                 {
                     if (!Char.IsDigit(c))
                     {
@@ -73,16 +74,16 @@ namespace WPF_Client
             }
         }
 
-        private string ipBlock_2;
+        private string _ipBlock_2;
         public string IPBlock_2
         {
-            get { return ipBlock_2; }
+            get { return _ipBlock_2; }
             set
             {
-                ipBlock_2 = value;
+                _ipBlock_2 = value;
 
                 bool valid = true;
-                foreach (char c in ipBlock_2)
+                foreach (char c in _ipBlock_2)
                 {
                     if (!Char.IsDigit(c))
                     {
@@ -103,16 +104,16 @@ namespace WPF_Client
             }
         }
 
-        private string ipBlock_3;
+        private string _ipBlock_3;
         public string IPBlock_3
         {
-            get { return ipBlock_3; }
+            get { return _ipBlock_3; }
             set
             {
-                ipBlock_3 = value;
+                _ipBlock_3 = value;
 
                 bool valid = true;
-                foreach (char c in ipBlock_3)
+                foreach (char c in _ipBlock_3)
                 {
                     if (!Char.IsDigit(c))
                     {
@@ -133,16 +134,16 @@ namespace WPF_Client
             }
         }
 
-        private string ipBlock_4;
+        private string _ipBlock_4;
         public string IPBlock_4
         {
-            get { return ipBlock_4; }
+            get { return _ipBlock_4; }
             set
             {
-                ipBlock_4 = value;
+                _ipBlock_4 = value;
 
                 bool valid = true;
-                foreach (char c in ipBlock_4)
+                foreach (char c in _ipBlock_4)
                 {
                     if (!Char.IsDigit(c))
                     {
@@ -160,6 +161,36 @@ namespace WPF_Client
                     ClearErrors("IPBlock_1");
 
                 OnPropertyChanged(new PropertyChangedEventArgs("IPBlock_4"));
+            }
+        }
+
+        private string _port;
+        public string Port
+        {
+            get { return _port; }
+            set
+            {
+                _port = value;
+
+                bool valid = true;
+                foreach (char c in _port)
+                {
+                    if (!Char.IsDigit(c))
+                    {
+                        valid = false;
+                        break;
+                    }
+                }
+                if (!valid)
+                {
+                    List<string> errors = new List<string>();
+                    errors.Add("Порт может состоять только из цифр.");
+                    SetErrors("Port", errors);
+                }
+                else
+                    ClearErrors("Port");
+
+                OnPropertyChanged(new PropertyChangedEventArgs("Port"));
             }
         }
 
